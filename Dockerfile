@@ -12,6 +12,5 @@ RUN cd td/build && CXXFLAGS="-stdlib=libc++" CC=/usr/bin/clang CXX=/usr/bin/clan
 
 RUN rm -rf td
 
-RUN npm install yarn -g
 
 ENV PATH $HOME/.yarn/bin:$PATH
