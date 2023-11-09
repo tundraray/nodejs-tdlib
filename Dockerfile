@@ -18,4 +18,5 @@ RUN CXXFLAGS="-stdlib=libc++" CC=/usr/bin/clang CXX=/usr/bin/clang++ cmake -DCMA
  
 FROM node:18-slim
 COPY --from=build /td-build/td/tdlib /usr/local
+RUN apt-get install -y bzip2 zlib1g-dev libssl-dev libc++-dev libc++abi-dev
 ENV PATH $HOME/.yarn/bin:$PATH
